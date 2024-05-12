@@ -40,8 +40,6 @@ df = pd.concat([input_df, heart_dataset], axis=0)
 # df = pd.get_dummies(df, columns=['male', 'prevalentStroke', 'prevalentHyp', 'diabetes'])
 
 # Take only the first row (user input)
-df = df[:1]
-print(df.columns)
 df=df.drop([ 'cigsPerDay','BPMeds'], axis=1)
 imputer = SimpleImputer(strategy='mean')
 imputer.fit(df)
