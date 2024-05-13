@@ -7,7 +7,7 @@ from sklearn.impute import SimpleImputer
 st.sidebar.header('User input Features')
 
 def user_input_features():
-    age = st.sidebar.number_input("Enter your age: ", min_value=20, max_value=100, key="age")
+    age = st.number_input("Enter your age: ", min_value=20, max_value=100, key="age")
     prevalentHyp = st.sidebar.selectbox('Prevalent Hypertension', (0, 1), key="prevalentHyp")
     prevalentStroke = st.sidebar.selectbox('Prevalent Stroke', (0, 1), key="prevalentStroke")
     diabetes = st.sidebar.selectbox('Diabetes', (0, 1), key="diabetes")
